@@ -1,4 +1,4 @@
-from driver import driver
+from src.appium.driver import driver
 from lm_client import ask_llm
 import time
 
