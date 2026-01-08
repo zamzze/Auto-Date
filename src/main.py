@@ -1,5 +1,9 @@
 from src.appium.driver import driver
-from lm_client import ask_llm
+from src.llm.lm_client import ask_llm
+from src.chat.chat_detector import get_unread_chats
+from src.chat.message_extractor import get_last_message
+from src.chat.message_sender import send_reply
+
 import time
 
 def process_chats():
@@ -16,7 +20,6 @@ def process_chats():
 
         driver.back()
         time.sleep(1)
-
 while True:
     process_chats()
-    time.sleep(10)
+    time.sleep(20)
