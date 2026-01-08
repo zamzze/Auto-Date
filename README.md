@@ -168,7 +168,7 @@ En el celular:
 - ✔ Opciones de desarrollador activadas
 - ✔ Depuración USB activada
 - ✔ Autorizar la PC cuando lo pida
-- ✔ Realizar Root
+- ✔ Realizar Root (No necesario en dispositivos antiguos)
 - ✔ Pantalla desbloqueada (recomendado)
 
 ---
