@@ -12,7 +12,7 @@ Si clonas este repo en una PC nueva, siguiendo esta guía **todo debería funcio
 
 ---
 
-## 🧠 Arquitectura general (para entender qué hace qué)
+## 🧠 Arquitectura general
 
 ```text
 Python (tu código)
