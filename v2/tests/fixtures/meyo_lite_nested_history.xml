@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Sanitized structure from the ZTE sample. Names, timestamps and bubble text are illustrative. -->
+<hierarchy rotation="0">
+  <node package="com.pita.oyem" class="android.widget.FrameLayout" bounds="[0,0][720,1586]">
+    <node package="com.pita.oyem" class="android.view.View" bounds="[0,0][720,1586]" clickable="true" content-desc="Chat">
+      <node package="com.pita.oyem" class="android.view.View" bounds="[0,66][100,150]" clickable="true" enabled="true" />
+      <node package="com.pita.oyem" class="android.view.View" bounds="[111,92][197,124]" clickable="true" enabled="true" content-desc="Contacto" />
+      <node package="com.pita.oyem" class="android.view.View" bounds="[0,150][720,1341]" scrollable="false">
+        <node package="com.pita.oyem" class="android.view.View" bounds="[0,150][720,1341]" scrollable="false">
+          <node package="com.pita.oyem" class="android.view.View" bounds="[0,150][720,173]" clickable="true" focusable="true" />
+          <node package="com.pita.oyem" class="android.view.View" bounds="[0,150][720,356]" clickable="true" focusable="true" content-desc="Perfil&#10;Contacto&#10;Información" />
+          <node package="com.pita.oyem" class="android.view.View" bounds="[0,356][720,638]" clickable="false" focusable="true" content-desc="12:01">
+            <node package="com.pita.oyem" class="android.widget.ImageView" bounds="[19,448][96,524]" clickable="true" />
+            <node package="com.pita.oyem" class="android.widget.ImageView" bounds="[119,448][563,618]" clickable="true" content-desc="Entrada de ejemplo A&#10;Tarjeta&#10;11&#10;1">
+              <node package="com.pita.oyem" class="android.view.View" bounds="[407,461][551,605]" clickable="true">
+                <node package="com.pita.oyem" class="android.widget.ImageView" bounds="[407,461][551,605]" />
+                <node package="com.pita.oyem" class="android.widget.ImageView" bounds="[524,565][551,592]" />
+              </node>
+            </node>
+          </node>
+          <node package="com.pita.oyem" class="android.view.View" bounds="[0,638][720,919]" clickable="false" focusable="true" content-desc="12:02">
+            <node package="com.pita.oyem" class="android.widget.ImageView" bounds="[19,729][96,806]" clickable="true" />
+            <node package="com.pita.oyem" class="android.widget.ImageView" bounds="[119,729][563,900]" clickable="true" content-desc="Entrada de ejemplo B&#10;Tarjeta&#10;12&#10;1" />
+          </node>
+          <node package="com.pita.oyem" class="android.view.View" bounds="[0,919][720,1029]" clickable="false" focusable="true" content-desc="Sin respuesta en 5 minutos, la recompensa ya no está disponible." />
+        </node>
+      </node>
+      <node package="com.pita.oyem" class="android.view.View" bounds="[38,1349][612,1395]" scrollable="true">
+        <node package="com.pita.oyem" class="android.view.View" bounds="[38,1349][477,1395]" clickable="true" content-desc="Respuesta sugerida" />
+      </node>
+      <node package="com.pita.oyem" class="android.widget.EditText" bounds="[127,1437][624,1533]" clickable="true" enabled="true" focused="false" text="" />
+    </node>
+    <node package="com.pita.oyem" class="android.view.View" bounds="[556,837][700,975]" scrollable="true" />
+  </node>
+</hierarchy>
