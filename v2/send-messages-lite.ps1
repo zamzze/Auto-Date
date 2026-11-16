@@ -22,6 +22,9 @@ param(
     [Alias('activate-adb-keyboard')]
     [switch]$ActivateAdbKeyboard,
 
+    [Alias('fast-focus')]
+    [switch]$FastFocus,
+
     [guid]$Resume,
 
     [Alias('inbox-only')]
@@ -39,6 +42,7 @@ $arguments = @(
     '--delay-max'; $DelayMax.ToString('R', $culture)
     if ($Apply) { '--apply' } else { '--dry-run' }
     if ($ActivateAdbKeyboard) { '--activate-adb-keyboard' }
+    if ($FastFocus) { '--fast-focus' }
     if ($PSBoundParameters.ContainsKey('Resume')) { '--resume'; $Resume.ToString() }
     if ($InboxOnly) { '--inbox-only' }
 )

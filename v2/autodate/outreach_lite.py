@@ -427,11 +427,21 @@ def visit(driver, keyboard, journal, row, point, aliases, text, args, results, p
             else:
                 stage = "enfoque"
                 stage_started = time.perf_counter()
+                fast_focus_applied = False
                 if not chat.focused:
                     recover = True
-                    chat = driver.focus_editor(chat)
+                    if args.fast_focus:
+                        # The preceding XML already verified recipient, composer bounds,
+                        # and empty text. Tap that same composer without another XML dump.
+                        # The focus result is intentionally NOT marked as verified.
+                        driver.observed_screen = None
+                        driver.tap(chat.composer.point())
+                        fast_focus_applied = True
+                    else:
+                        chat = driver.focus_editor(chat)
                     recover = False
-                event("ENFOQUE", f"{recipient} | {elapsed(stage_started)}")
+                event("ENFOQUE", f"{recipient} | {elapsed(stage_started)}"
+                      + (" | RAPIDO_SIN_VERIFICAR" if fast_focus_applied else ""))
                 if (remaining := results.next_send_at - time.perf_counter()) > 0:
                     event("ESPERA", f"{recipient} | {remaining:.1f} s")
                     time.sleep(remaining)
@@ -568,6 +578,7 @@ def main(argv=None):
     parser.add_argument("--delay-min", type=float, default=1)
     parser.add_argument("--delay-max", type=float, default=2)
     parser.add_argument("--activate-adb-keyboard", action="store_true")
+    parser.add_argument("--fast-focus", action="store_true")
     parser.add_argument("--resume", type=UUID)
     parser.add_argument("--inbox-only", action="store_true")
     modes = parser.add_mutually_exclusive_group()
